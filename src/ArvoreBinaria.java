@@ -149,4 +149,29 @@ public class ArvoreBinaria {
         }
         return contarNosFolhas(atual.esquerda) + contarNosFolhas(atual.direita);
     }
+
+    public int contarAltura(No atual) {
+        if (atual == null) {
+            return -0;
+        } else {
+            int altEsquerda = contarAltura(atual.esquerda);
+            int altDireita = contarAltura(atual.direita);
+
+            return 1 + Math.max(altEsquerda, altDireita);
+        }
+    }
+
+    public void inverterÁrvore(No atual) {
+        No aux;
+        if (atual == null) {
+            return;
+        }
+
+        aux = atual.esquerda;
+        atual.esquerda = atual.direita;
+        atual.direita = aux;
+
+        inverterÁrvore(atual.esquerda);
+        inverterÁrvore(atual.direita);
+    }
 }
