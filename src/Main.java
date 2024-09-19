@@ -9,5 +9,8 @@ public class Main {
         arvore.inserir(c2);
         arvore.inserir(c3);    
 
+        int a = arvore.contarNumerosDeNo(c1);
+        System.out.println(a);
+
     }
 }

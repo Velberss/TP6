@@ -128,5 +128,8 @@ public class ArvoreBinaria {
         }else{
             return 1 + (contarNumerosDeNo(atual.esquerda) + contarNumerosDeNo(atual.direita));
         }
-    }   
+    }
+    //   public int contarNosNãoFolhas(No atual){}
+
+    
 }
