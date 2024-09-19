@@ -129,7 +129,26 @@ public class ArvoreBinaria {
             return 1 + (contarNumerosDeNo(atual.esquerda) + contarNumerosDeNo(atual.direita));
         }
     }
-    //   public int contarNosNãoFolhas(No atual){}
+    
+    public int contarNosNãoFolhas(No atual){
+        if(atual == null){
+            return 0 ;
+        }
+        if( atual.esquerda == null && atual.direita == null){
+            return 0;
+        }
+        return 1 + contarNosNãoFolhas(atual.esquerda) + contarNosNãoFolhas(atual.direita);
+    }
+
+    public int contarNosFolhas(No atual){
+        if(atual == null){
+            return 0 ;
+        }
+        if( atual.esquerda == null && atual.direita == null){
+            return 1;
+        }
+        return contarNosFolhas(atual.esquerda) + contarNosFolhas(atual.direita);
+    }
+}
 
     
-}
