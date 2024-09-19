@@ -7,10 +7,7 @@ public class Main {
       
         arvore.inserir(c1);
         arvore.inserir(c2);
-        arvore.inserir(c3);
-
-        
-        arvore.contarNo(c1);
+        arvore.inserir(c3);    
 
     }
 }

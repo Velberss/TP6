@@ -122,16 +122,11 @@ public class ArvoreBinaria {
         return maisEsquerdaPossivel(filhoAtual, filhoAtual.esquerda);
     }
 
-    private int contarNumerosDeNo(No atual) {
+    public int contarNumerosDeNo(No atual) {
         if (atual == null) {
             return(0);
         }else{
-            return 1 + contarNumerosDeNo(atual.esquerda) + contarNumerosDeNo(atual.direita);
+            return 1 + (contarNumerosDeNo(atual.esquerda) + contarNumerosDeNo(atual.direita));
         }
-    }
-
-    public void contarNo(No atual){
-        contarNumerosDeNo(atual);
-    }
-
+    }   
 }
