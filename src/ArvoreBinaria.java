@@ -174,4 +174,16 @@ public class ArvoreBinaria {
         inverterÁrvore(atual.esquerda);
         inverterÁrvore(atual.direita);
     }
+
+    public void removerPar(No atual) {
+        if (atual != null) {
+            removerPar(atual.direita);
+            removerPar(atual.esquerda);
+
+            if ((atual.valor % 2) == 0) {
+                removerCelula(atual.valor);
+            }
+            
+        }
+    }
 }

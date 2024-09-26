@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
-        No c1 = new No(4);
+        No c1 = new No(9);
         No c2 = new No(2);
-        No c3 = new No(6);
+        No c3 = new No(11);
         No c4 = new No(1);
         No c5 = new No(3);
-        No c6 = new No(5);
+        No c6 = new No(12);
         No c7 = new No(7);
         
         arvore.inserir(c1);
@@ -17,12 +17,8 @@ public class Main {
         arvore.inserir(c6);
         arvore.inserir(c7);
          
-     
-        arvore.inverterÁrvore(c1);
+        arvore.removerPar(c1);
         arvore.preOrdem(c1);
-        int a = arvore.contarAltura(c1); 
-        System.out.println(a);
-      
 
     }
 }
