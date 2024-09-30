@@ -183,7 +183,6 @@ public class ArvoreBinaria {
             if ((atual.valor % 2) == 0) {
                 removerCelula(atual.valor);
             }
-            
         }
     }
 }

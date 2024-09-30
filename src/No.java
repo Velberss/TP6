@@ -2,10 +2,12 @@ public class No {
     int valor;
     No direita;
     No esquerda;
+    No prox;
 
     public No(int valor) {
         this.valor = valor;
-        esquerda = null;
-        direita = null;
+        this.esquerda = null;
+        this.direita = null;
+        this.prox = null;
     }
 }
